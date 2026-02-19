@@ -139,6 +139,12 @@ function analyzeSalesData(data, options) {
             seller.products_sold[item.sku] += item.quantity;
         });
     });
+
+    sellerStats.forEach(seller => {
+        seller.revenue = seller.revenue || 0;
+        seller.profit = seller.profit || 0;
+    });
+
     // Сортировка продавцов по прибыли
     sellerStats.sort((a, b) => b.profit - a.profit);
 
