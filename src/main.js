@@ -34,7 +34,7 @@ function calculateSimpleRevenue(purchase, _product) {
 }
 
 // Расчет бонусов
-function calculateBonus(index, total, seller) {
+function calculateBonusByProfit(index, total, seller) {
     const { profit } = seller;
 
     if (index === 0) {
